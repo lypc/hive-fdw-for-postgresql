@@ -5,4 +5,4 @@ setup(name='HiveFDW',
       author='Youngwoo Kim',
       author_email='warwithin@gmail.com',
       url='https://github.com/youngwookim/hive-fdw-for-postgresql',
-      py_modules=['hivefdw'])
+      py_modules=['hivefdw','hive2fdw','kylinfdw'])
