@@ -36,21 +36,25 @@ Installation
 4. In the PostgreSQL client, create an extension and foreign server:
 
     0)
+    
         CREATE EXTENSION multicorn;
         
     1)
+    
         CREATE SERVER multicorn_hive FOREIGN DATA WRAPPER multicorn
         OPTIONS (
             wrapper 'hivefdw.HiveForeignDataWrapper'
         );
 
     2)
+    
         CREATE SERVER multicorn_hive_server2 FOREIGN DATA WRAPPER multicorn
         OPTIONS (
             wrapper 'hive2fdw.HiveServer2ForeignDataWrapper'
         );
 
     3)
+    
         CREATE SERVER multicorn_kylin FOREIGN DATA WRAPPER multicorn
         OPTIONS (
             wrapper 'kylin.KylinForeignDataWrapper'
