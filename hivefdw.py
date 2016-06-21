@@ -61,3 +61,14 @@ class HiveForeignDataWrapper(ForeignDataWrapper):
         finally:
             transport.close()
     
+if __name__ == '__main__': 
+    transport = TSocket.TSocket('sha2hdpn02', '26161')
+    transport = TTransport.TBufferedTransport(transport)
+    protocol = TBinaryProtocol.TBinaryProtocol(transport)
+    client = ThriftHive.Client(protocol)
+    transport.open()
+    
+    client.execute('select a from default.dual')
+    
+    for row in client.fetchAll():
+        print row

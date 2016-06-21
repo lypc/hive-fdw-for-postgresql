@@ -57,7 +57,7 @@ Installation
     
         CREATE SERVER multicorn_kylin FOREIGN DATA WRAPPER multicorn
         OPTIONS (
-            wrapper 'kylin.KylinForeignDataWrapper'
+            wrapper 'kylinfdw.KylinForeignDataWrapper'
         );
 
 Examples

@@ -50,8 +50,6 @@ class HiveServer2ForeignDataWrapper(ForeignDataWrapper):
                 
         except NotImplementedError, ix:
             log_to_postgres(ix.message, ERROR)
-        except Exception, ex:
-            log_to_postgres(ex.message, ERROR)
         finally:
             client.close()
 
